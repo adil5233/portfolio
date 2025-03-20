@@ -180,7 +180,7 @@ a{
     z-index: -9;
 }
 
-img{
+.user-image img{
     object-fit:cover;
 }
 
@@ -457,4 +457,122 @@ img{
 #project4{
     margin-left: 120px;
     background-image: url(./images/projects/Project4.png);
+}
+
+.skills-container{
+    position: relative;
+    display: flex;
+
+    padding: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+}
+
+.skill-container-left{
+    width:45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-container-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 5%;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill-fade-text{
+    position: absolute;
+    font-size: 15em;
+    font-style: bold;
+    color: rgba(232, 231, 231);
+    bottom: -34.5%;
+    right: -25%;
+    user-select: none;
+}
+
+.blob-style{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: blobAnimate 3s linear infinite;
+    z-index: -5;
+}
+
+@keyframes blobAnimate {
+
+    50%{
+        top: 54%;
+        left: 56%;
+    }
+    
+}
+
+@media (max-width: 1200px) {
+    .skills-container {
+      margin: 0;
+      padding: 2em;
+      flex-direction: column;
+    }
+    .skill-heading {
+      font-size: 40px;
+      font: bold;
+    }
+    .caps {
+      font-size: 60px;
+    }
+    .skill-container-left {
+      width: 100%;
+    }
+    .skill-container-right {
+      width: 100%;
+    }
+    .skills-logo {
+      width: 50px;
+    }
+    .skill-fade-text {
+      display: none;
+    }
+    .skill-subHeading {
+      width: 100%;
+    }
+    .skill-heading::after {
+      bottom: 9%;
+    }
+  }
+
+.skills-logo{
+    width: 60px;
+    transition: 0.5s;
+}
+
+.skills-logo:hover{
+    transform: scale(1.2);
+}
+
+.skill-heading{
+
+    color: var(--bgOrange);
+    font-size: 50px;
+    font-style: bold;
+    line-height: 50px;
+
+}
+
+.caps{
+    font-size: 90px;
+}
+
+.skill-subHeading{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+}
+
+.skill-subHeading p{
+
 }
